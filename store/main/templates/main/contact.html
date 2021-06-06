@@ -1,0 +1,115 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<h2>Контакты</h2>
+<section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+            <div class="card bg-dark text-white">
+              <img src="{% static 'main/img/map.jpg' %}" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Адрес самовывоза</h5>
+                <p class="card-text">190000, Санкт-Петербург, Невский проспект дом 88, корпус 7.</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h3>Доставка по России</h3>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Доставка компанией "СДЭК"
+                  </button>
+                </h4>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Информация о доставке компанией СДЭК.</strong>...В разработке...
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Доставка компанией "Деловые линии"
+                  </button>
+                </h4>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Информация о доставке компанией "Деловые линии".</strong>...В разработке...
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Доставка "Почтой Росии"
+                  </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Информация о доставке "Почтой России".</strong>...В разработке...
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-sm">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/Instagram_logo.png' %}"  class="iconochka" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Наш Instagram</h5>
+                                <p class="card-text">Здесь Вы можете увидеть красивые фотографии наших изделий. А также написать нам в Директ.</p>
+                                <p class="card-text"><small class="text-muted">@backpackprintshop</small></p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/vk.png' %}" class="iconochka" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Наша группа ВКонтакте</h5>
+                                <p class="card-text">Здесь Вы можете почитать отзывы и задать вопросы в сообщения сообщества.</p>
+                                <p class="card-text"><small class="text-muted">https://vk.com/**********</small></p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'main/img/telegram.png' %}" class="iconochka" alt="...">
+                            <img src="{% static 'main/img/whatsapp.png' %}" class="iconochka" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Наши мессенджеры</h5>
+                                <p class="card-text">Еще один способ связаться с нами и задать все интересующие вопросы.</p>
+                                <p class="card-text"><small class="text-muted">+7 (900) 000 00-00</small></p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+</section>
+{% endblock %}

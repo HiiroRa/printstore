@@ -1,0 +1,36 @@
+<section>
+    <div class="container-fluid">
+      <div class="row align-items-start">
+        <div class="col-sm">
+          <div class="card" style="width: 19rem;">
+            <img src="{% static 'main/img/backpack.jpg' %}" class="card-img-top" alt="backpack">
+            <div class="card-body">
+                <h5 class="card-title">Наш товар</h5>
+                <p class="card-text">Ознакомиться с нашей продукций можно в разделе "Магазин". Там же Вы сможете посмотреть состав изделия.</p>
+                <a href="#" class="btn btn-primary">К магазину</a>
+            </div>
+          </div>
+        </div>
+            <div class="col-sm">
+                <div class="card" style="width: 19rem;">
+                <img src="{% static 'main/img/custom.jpg' %}" class="card-img-top" alt="custom">
+                 <div class="card-body">
+                     <h5 class="card-title">Новинки</h5>
+                    <p class="card-text">В разделе "Новости" Вы можете ознакомиться с новыми разработками или уже вышедшими изделиями более подробно.</p>
+                    <a href="#" class="btn btn-primary">К новостям</a>
+                 </div>
+                </div>
+            </div>
+        <div class="col-sm">
+          <div class="card" style="width: 19rem;">
+             <img src="{% static 'main/img/protses.jpg' %}" class="card-img-top" alt="protses">
+                <div class="card-body">
+                    <h5 class="card-title">Наша жизнь</h5>
+                     <p class="card-text">Если Вы хотите не только читать о "магии" нашего производства, но и влиять на некоторые будущие изделия, то в разделе "Контакты" вы найдете ссылки на наши социальные сети.</p>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">К контактам</a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

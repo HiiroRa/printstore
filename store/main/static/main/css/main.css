@@ -48,7 +48,7 @@ h1{
 }
 
 .card-img-top{
-    height:240px;
+    height:220px;
 }
 
 .align-items-start{
@@ -137,4 +137,9 @@ h5.card-title{
     font-weight:bold;
     font-size: 100%;
     text-shadow: 1px 1px 3px #ca3e49;
+}
+
+.title-card{
+    margin-left: 3%!important;
+    margin-right: 3%!important;
 }

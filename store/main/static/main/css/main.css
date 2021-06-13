@@ -58,9 +58,9 @@ h1{
 }
 
 .card{
-    background-color: #b47e58!important;
-    border: 1.5px solid #b47e58;
-    box-shadow: 0 0 7px #b47e58;
+    background-color: #c4915e!important;
+    border: 1.5px solid #c4915e;
+    box-shadow: 0 0 7px #c4915e;
     color:#050505;
     margin-left:3%;
     margin-right:3%;
@@ -142,4 +142,9 @@ h5.card-title{
 .title-card{
     margin-left: 3%!important;
     margin-right: 3%!important;
+}
+
+section.center {
+    margin-left:14%!important;
+    margin-top:1%;
 }

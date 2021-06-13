@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<section class="center">
+    <div class="card" style="width: 50rem;">
+          <div class="card-body">
+            <h5 class="card-title"> {{ article.title }} </h5>
+              <p class="card-text"> {{ article.date }} </p>
+            <p class="card-text"> {{ article.full_text }} </p>
+              <a href="{% url 'news_home' %}" class="btn btn-danger">К новостям</a>
+          </div>
+    </div>
+</section>
+{% endblock %}

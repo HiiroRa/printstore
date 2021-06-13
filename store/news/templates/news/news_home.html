@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<section class="center">
+  <div class="container">
+    <h2>Новости</h2>
+      {% for el in news%}
+        <div class="card" style="width: 50rem;">
+          <div class="card-body">
+            <h5 class="card-title"> {{ el.title }} </h5>
+            <p class="card-text"> {{ el.anons }} </p>
+            <a href="{% url 'news_detail' el.id %}" class="btn btn-danger">Читать</a>
+          </div>
+        </div>
+      {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block tovar %}
+<nav aria-label="breadcrumb" class="m-1 p-1">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'base_shop' %}" class="category">Магазин</a></li>
+        <li class="breadcrumb-item">{{category.name}}</li>
+      </ol>
+    </nav>
+            <div class="row">
+            {% for product in category_products %}
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="{{ product.get_absolute_url }}"><img class="card-img-top" src="{{ product.image.url }}"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a class="product" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                        </h5>
+                        <p class="card-text">{{ product.price }} руб.</p>
+                        <a href="{% url 'add_to_cart' ct_model=product.get_model_name slug=product.slug %}">
+                            <button class="btn btn-danger">Добавить в корзину</button>
+                        </a>
+                    </div>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+
+{% endblock %}

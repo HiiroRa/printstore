@@ -1,0 +1,44 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Магазин{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="right">
+        <a class="nav-link right" href="{% url 'cart' %}">Корзина <span class="badge bg-danger">{{ cart.products.count }}</span></a>
+    </div>
+  <div class="row">
+      <div class="col-lg-3">
+          <div class="list-group">
+              {% for category in categories %}
+              <a class="list-group-item" href="{{ category.url }}">{{ category.name }} ({{ category.count }})</a>
+              {% endfor %}
+          </div>
+      </div>
+      <div class="col-lg-9">
+          {% block tovar %}
+          <div class="row">
+            {% for product in products %}
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="{{ product.get_absolute_url }}"><img class="card-img-top" src="{{ product.image.url }}"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a class="product" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                        </h5>
+                        <p class="card-text">{{ product.price }} руб.</p>
+                        <a href="{% url 'add_to_cart' ct_model=product.get_model_name slug=product.slug %}">
+                            <button class="btn btn-danger">Добавить в корзину</button>
+                        </a>
+                    </div>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+          {% endblock %}
+      </div>
+  </div>
+</div>
+{% endblock %}

@@ -148,3 +148,23 @@ section.center {
     margin-left:14%!important;
     margin-top:1%;
 }
+
+a.product{
+    color: #050505!important;
+    text-decoration: none!important;
+}
+
+
+a.right{
+    color: #ca3e49!important;
+    text-decoration: none!important;
+    font-size: 130%;
+    text-align:right!important;
+    font-weight:bold;
+}
+
+a.category{
+    color: #2f3650!important;
+    font-size: 100%;
+    font-weight:bold;
+}

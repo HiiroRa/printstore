@@ -33,14 +33,26 @@
                   <a class="nav-link" href="{% url 'contact' %}">Контакты</a>
                 </li>
               </ul>
+                {% if not request.user.is_authenticated %}
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><button type="button" class="btn btn-outline-primary">Войти</button></a>
+                        <a class="nav-link" href="{% url 'login' %}" ><button type="button" class="btn btn-outline-primary">Войти</button></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-success">Зарегистрироваться</button></a>
+                        <a class="nav-link" href="{% url 'registration' %}"><button type="button" class="btn btn-outline-success">Зарегистрироваться</button></a>
                     </li>
                 </ul>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button type="button" class="btn btn-primary">Личный кабинет</button></a>
+                    </li>
+                    <li>
+                    <a class="nav-link" href="{% url 'logout' %}"><button type="button" class="btn btn-danger">Выйти</button></a>
+                    </li>
+                </ul>
+                {% endif %}
             </div>
           </div>
         </nav>

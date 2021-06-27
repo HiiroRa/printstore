@@ -23,14 +23,7 @@
         <hr>
         <a href="{% url 'add_to_cart' ct_model=ct_model slug=product.slug %}"><button class="btn btn-danger">Добавить в корзину</button> </a>
     </div>
-    <p class="mt-3">Характеристики: </p>
-    {% if product.category.slug == 'patchs' %}
-        {% include 'shop/patchs_specification.html' %}
-    {% elif product.category.slug == 'backpacks' %}
-        {% include 'shop/backpack_specification.html' %}
-    {% elif product.category.slug == 'customization' %}
-        {% include 'shop/customization_specification.html' %}
-    {% endif %}
+
 </div>
 
 {% endblock %}
